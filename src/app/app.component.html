@@ -1,3 +1,72 @@
-<h1>
-  {{title}}
-</h1>
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-toggleable-sm navbar-inverse" id="mainNav">
+  <div class="container">
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-2x fa-bars"></i>
+    </button>
+    <a class="navbar-brand table-home" routerLink="/">TABLE</a>
+
+
+    <div class="collapse navbar-collapse" id="navbarResponsive" data-toggle="collapse" data-target="#navbarResponsive">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/leadership">LEADERSHIP</a>
+        </li>
+        <!--<li class="nav-item">-->
+          <!--<a class="nav-link" [routerLink]="['/witc']">WITC</a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+          <!--<a class="nav-link" href="#team">PODCASTS</a>-->
+        <!--</li>-->
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/contact" >CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/giving" >GIVING</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com/tabletandragee/"  target="_blank"><i class="fa fa-facebook fa-2x "></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.instagram.com/tabletandragee/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer id="footerSection" class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; TABLE 2017</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/tabletandragee/" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/tabletandragee/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <img class="ea-member">
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
