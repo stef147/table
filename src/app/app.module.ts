@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
+import { BeliefsComponent } from './components/beliefs/beliefs.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GivingComponent } from './components/giving/giving.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +21,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   declarations: [
     AppComponent,
     AboutComponent,
+    BeliefsComponent,
     ContactComponent,
     GivingComponent,
     HomeComponent,

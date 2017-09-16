@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import {HomeComponent} from './components/home/home.component';
 import {AboutComponent} from './components/about/about.component';
+import {BeliefsComponent} from './components/beliefs/beliefs.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {GivingComponent} from './components/giving/giving.component';
-import {LeadershipComponent} from "./components/leadership/leadership.component";
-import {WITCComponent} from "./components/witc/witc.component";
+import {LeadershipComponent} from './components/leadership/leadership.component';
+import {WITCComponent} from './components/witc/witc.component';
 
 const appRoutes: Routes = [
   {
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'beliefs',
+    component: BeliefsComponent
   },
   {
     path: 'contact',

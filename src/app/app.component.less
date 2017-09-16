@@ -10,10 +10,10 @@
 
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.5em;
 
   .nav-link {
-    padding-top: 2em;
+    padding-top: 3em;
   }
 
   a.nav-link{
@@ -25,9 +25,13 @@
   }
 
   .fa {
-    padding-top: 0.6em;
+    padding-top: 1.3em;
     color: whitesmoke;
-    padding-left: 20px;
+    padding-left: 0.5em;
+  }
+
+  .fa-instagram {
+    margin-right: 2em;
   }
 
   .fa:hover, .fa:active {
@@ -35,12 +39,28 @@
   }
 
   .table-home {
+    content: url("../assets/img/TableLogoNew1.png");
+    margin-left: 4em;
     padding-top: 0.5em;
     font-family: 'Playfair Display';
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 40px;
   }
+
+
+  @media (max-width: 720px) {
+    .nav-link {
+      padding-top: 0;
+    }
+    .fa {
+      padding-top: 0em;
+    }
+    .table-home {
+      content: url("../assets/img/LogoNew.png");
+      margin-left: 0em;
+    }
+  }
+
 
 }
 

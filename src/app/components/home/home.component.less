@@ -1,11 +1,63 @@
+/*---------------------------------------------*/
+/*Header Styling*/
+/*---------------------------------------------*/
 
+#homeHeader {
+  header {
+    min-height: 900px;
+  }
+
+
+  .home-title {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    i.fa-angle-down {
+      color: whitesmoke;
+      padding-bottom: 0.5em;
+    }
+    i:active, i:hover {
+      color: #fed136;
+    }
+
+    a:hover, a:active {
+      color: #fed136;
+    }
+
+    h1 {
+      color: whitesmoke;
+      font-weight: 200;
+      letter-spacing: 8px;
+      font-size: 2em;
+      padding-bottom: 0.5em;
+    }
+  }
+
+  @media (max-width: 720px) {
+    header {
+      min-height: 500px;
+    }
+    .home-title {
+      h1{
+        padding-bottom: 0;
+      }
+    }
+  }
+
+
+  div.social-button-container {
+    padding-top: 300px;
+  }
+}
 /*---------------------------------------------*/
 /*Section Styling*/
 /*---------------------------------------------*/
 
 #schedule {
-  padding-top: 125px;
-  padding-bottom: 200px;
   background: rgba(0,0,0,0.8);
   color:whitesmoke;
 }
