@@ -24,7 +24,7 @@ app-root {
 
 
 body.bg {
-  background: url('assets/img/background3.jpg') no-repeat center center fixed;
+  background: url('assets/img/Background1.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -40,12 +40,19 @@ body.bg {
 
 
 header {
-  min-height: 900px;
+  min-height: 100vh;
 }
 
-@media (max-width: 720px) {
-  header {
-    min-height: 500px;
+@media (max-width: 768px) {
+  body {
+    font-size: 70%;
+  }
+  body.bg {
+    background: url('assets/img/Background1small.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
   }
 }
 
@@ -183,15 +190,5 @@ section h3.section-subheading {
 
 
 
-@media (max-width: 768px) {
-  body {
-    font-size: 70%;
-  }
-
-  //section {
-  //  padding-top: 150px;
-  //  padding-bottom: 100px;
-  //}
-}
 
 
