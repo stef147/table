@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 
 import { AboutComponent } from './components/about/about.component';
 import { BeliefsComponent } from './components/beliefs/beliefs.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DiscipleshipComponent } from './components/discipleship/discipleship.component';
 import { GivingComponent } from './components/giving/giving.component';
 import { HomeComponent } from './components/home/home.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { LocationComponent } from './components/location/location.component';
+import { PrayerComponent } from './components/prayer/prayer.component';
 import { PhotosComponent } from './components/photos/photos.component';
+import { ValuesComponent } from './components/values/values.component';
 import { WITCComponent } from './components/witc/witc.component';
 
 import { AppRoutingModule } from './app.routing';
@@ -25,12 +29,16 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     AppComponent,
     AboutComponent,
     BeliefsComponent,
+    CalendarComponent,
     ContactComponent,
+    DiscipleshipComponent,
     GivingComponent,
     HomeComponent,
     LeadershipComponent,
     LocationComponent,
     PhotosComponent,
+    PrayerComponent,
+    ValuesComponent,
     WITCComponent,
   ],
   imports: [

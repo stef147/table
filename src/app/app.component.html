@@ -1,41 +1,61 @@
 <!-- Navigation -->
 
-<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse" id="mainNav">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded sticky-top" id="navbar">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive" data-toggle="collapse" data-target="#navbarResponsive">
-      <ul class="navbar-nav navbar-left">
-        <li class="nav-item">
-          <a class="table-home" routerLink="/"></a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto navbar-right">
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/about">ABOUT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/beliefs">BELIEFS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/leadership">LEADERSHIP</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/contact" >CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/giving" >GIVING</a>
-        </li>
-        <li class="nav-item">
-          <a href="https://www.facebook.com/tabletandragee/"  target="_blank"><i class="fa fa-facebook fa-2x "></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="https://www.instagram.com/tabletandragee/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-        </li>
-      </ul>
-    </div>
+  <ul class="navbar-nav mr-auto">
+    <a class="table-home" routerLink="/"><img src="../assets/img/Logo100.png"></a>
+  </ul>
 
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item"[routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item dropdown"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link dropdown-toggle" href="" id="aboutDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ABOUT
+        </a>
+        <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+          <a class="dropdown-item" routerLink="/about">ABOUT</a>
+          <a class="dropdown-item" routerLink="/beliefs">BELIEFS</a>
+          <a class="dropdown-item" routerLink="/leadership">LEADERSHIP</a>
+          <a class="dropdown-item" routerLink="/values">VALUES</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link dropdown-toggle" href="" id="whatsonDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          WHAT'S ON
+        </a>
+        <div class="dropdown-menu" aria-labelledby="whatsonDropdown">
+          <a class="dropdown-item" routerLink="/calendar">CALENDAR</a>
+          <a class="dropdown-item" routerLink="/discipleship">DISCIPLESHIP</a>
+          <a class="dropdown-item" routerLink="/prayer">PRAYER</a>
+          <a class="dropdown-item" routerLink="/witc">WITC</a>
+        </div>
+      </li>
+
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/contact']">CONTACT</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" [routerLink]="['/giving']">GIVING</a>
+      </li>
+
+
+      <li class="nav-item">
+      <a href="https://www.facebook.com/tabletandragee/"  target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+      <a href="https://www.instagram.com/tabletandragee/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 
@@ -43,15 +63,15 @@
 
 <!-- Footer -->
 <footer id="footerSection">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
 
-      <div class="col-md-4" style="margin-bottom: 5%">
+      <div class="col-md-4">
         <span class="copyright">Copyright &copy; TABLE 2017</span>
       </div>
 
-      <div class="col-md-4" style="margin-bottom: 5%">
-        <ul class="list-inline social-buttons">
+      <div class="col-md-4" >
+        <ul class="list-inline">
           <li class="list-inline-item">
             <a href="https://www.facebook.com/tabletandragee/" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
           </li>
@@ -61,9 +81,9 @@
         </ul>
       </div>
 
-      <div class="col-md-4" style="margin-bottom: 5%">
+      <div class="col-md-4">
         <a href="http://www.eauk.org/"  target="_blank">
-          <img class="ea-member img-thumbnail" >
+          <img class="ea-member" >
         </a>
       </div>
 

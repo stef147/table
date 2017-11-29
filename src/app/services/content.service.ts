@@ -13,7 +13,14 @@ export class ContentService {
   getContent(page) {
     var apiUrl = 'http://tabletandragee.org/Content/wp-json/wp/v2/pages?slug=' + page;
     return this.http.get(apiUrl)
-      .map(res => res.json())
+      .map(res => res.json());
+  }
+
+  //id = 58 corresponnds to the parent id of values page
+  getValuesContent() {
+    var apiUrl = 'http://tabletandragee.org/Content/wp-json/wp/v2/pages?parent=58';
+    return this.http.get(apiUrl)
+      .map(res => res.json());
   }
 
 }

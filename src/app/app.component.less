@@ -1,32 +1,31 @@
 
 /*---------------------------------------------*/
-/*Nav styling*/
+/*Navbar styling*/
 /*---------------------------------------------*/
-#mainNav {
-  background-color: black;
-  opacity: 0.7;
-  min-height: 50px;
+
+#navbar{
+
+  //min-height: 5em;
   color: whitesmoke;
+  opacity: 0.95;
 
   text-transform: uppercase;
-  font-weight: 500;
   font-size: 1.5em;
 
-  .nav-link {
-    padding-top: 3em;
+  .dropdown:hover>.dropdown-menu {
+    display: block;
   }
 
-  a.nav-link{
-    color: whitesmoke;
-  }
-
-  a:hover, a:active {
+  a:hover {
     color: #fed136;
   }
 
+  .active {
+    font-weight: bolder;
+  }
+
   .fa {
-    padding-top: 1.3em;
-    color: whitesmoke;
+    color: black;
     padding-left: 0.5em;
   }
 
@@ -38,29 +37,17 @@
     color: #fed136;
   }
 
-  .table-home {
-    content: url("../assets/img/TableLogoNew1.png");
-    margin-left: 4em;
-    padding-top: 0.5em;
-    font-family: 'Playfair Display';
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+  @media (min-width: 1024px) {
+    #navbar{
+      max-height: 20vh;
 
-
-  @media (max-width: 768px) {
-    .nav-link {
-      padding-top: 0;
-    }
-    .fa {
-      padding-top: 0em;
     }
     .table-home {
-      content: url("../assets/img/LogoNew.png");
-      margin-left: 0em;
+      display: inline-block;
+      content: url("../assets/img/Logo100.png");
+      margin-left: 1em;
     }
   }
-
 
 }
 
@@ -72,11 +59,11 @@
 
 footer {
   width: 100%;
-  padding-top: 5%;
-  padding-bottom: 2%;
+  padding-top: 2em;
+  //padding-bottom: 2em;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 
@@ -87,8 +74,17 @@ footer span.copyright {
   text-transform: none;
 }
 
+.fa {
+  color: black;
+  padding-left: 0.5em;
+}
+
+.fa:hover, .fa:active {
+  color: #fed136;
+}
+
 .ea-member {
-  content: url("../assets/img/ea.png");
+  content: url("../assets/img/eaLogo_L.png");
 }
 
 

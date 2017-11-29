@@ -23,36 +23,48 @@ app-root {
 }
 
 
-body.bg {
-  background: url('assets/img/Background1.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
 #wrapper{
   width: 100%;
   height: 100%;
   overflow: scroll;
 }
 
-
-header {
-  min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 70%;
-  }
+@media (min-width: 1024px) {
   body.bg {
-    background: url('assets/img/Background1small.jpg')no-repeat center center fixed;
+    background:url('assets/img/breakfastLarge.jpg')no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100% 100%;
+    background-size:cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 85%;
+  }
+  body.bg {
+    background: url('assets/img/breakfastMedium.jpg')no-repeat fixed;
+    background-position: 65% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
+  body.bg {
+    background: url('assets/img/breakfastSmall.jpg')no-repeat fixed;
+    background-position: 65% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover;
   }
 }
 
@@ -169,8 +181,10 @@ ul.social-buttons li a:hover, ul.social-buttons li a:active {
 /*---------------------------------------------*/
 
 section {
-  padding-top: 15em;
-  padding-bottom: 25em;
+  min-height: 70vh;
+
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 section h2.section-heading {
   text-align: center;

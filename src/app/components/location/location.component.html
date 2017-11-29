@@ -1,14 +1,18 @@
 
-<section id="locationSection">
-  <div class="container text-center">
-    <h2 class="section-heading">Location</h2>
-    <p class="large">
-      Table gatherings take place at Units 7-8 TDI House, Market Street, Tandragee, BT62 2NP.
-    </p>
-    <div class="container mapDiv">
-      <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-      </sebm-google-map>
+<section id="locationSection" class="locationBackground">
+  <div class="locationContainer">
+    <div class="container-fluid text-center">
+          <h3 class="section-subheading">
+           Where to find us
+          </h3>
+          <p class="large">
+            Units 7-8 TDI House, Market Street, Tandragee, BT62 2NP.
+          </p>
+          <div class="container mapDiv">
+            <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+              <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+            </sebm-google-map>
+          </div>
     </div>
   </div>
 </section>

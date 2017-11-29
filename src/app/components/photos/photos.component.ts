@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { fadeInAnimation } from '../../app.animations';
 
 
@@ -9,7 +9,8 @@ import { fadeInAnimation } from '../../app.animations';
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
-export class PhotosComponent {}
+export class PhotosComponent {
+}
 
 
 

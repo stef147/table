@@ -2,19 +2,16 @@
 /*Header Styling*/
 /*---------------------------------------------*/
 
-#homeHeader {
-  header {
-    min-height: 900px;
-  }
+#home {
+
+    min-height: 70vh;
 
 
   .home-title {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
+    top: 50vh;
+    //transform: translateY(50vh);
 
     i.fa-angle-down {
       color: whitesmoke;
@@ -31,16 +28,13 @@
     h1 {
       color: whitesmoke;
       font-weight: 500;
-      letter-spacing: 8px;
+      letter-spacing: 0.25em;
       font-size: 2em;
       padding-bottom: 0.5em;
     }
   }
 
   @media (max-width: 720px) {
-    header {
-      min-height: 500px;
-    }
     .home-title {
       h1{
         padding-bottom: 0;
@@ -58,8 +52,13 @@
 /*---------------------------------------------*/
 
 #schedule {
-  background: rgba(0,0,0,0.8);
-  color:whitesmoke;
+  background: rgba(245,245,245,1);
+
+  color: black;
+  min-height: 10vh;
+
+  padding-top: 6em;
+  padding-bottom: 6em;
 }
 
 
