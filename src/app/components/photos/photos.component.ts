@@ -10,6 +10,8 @@ import { fadeInAnimation } from '../../app.animations';
   host: { '[@fadeInAnimation]': '' }
 })
 export class PhotosComponent {
+
+  @Input()  photoName: string;
 }
 
 

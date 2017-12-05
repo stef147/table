@@ -3,28 +3,28 @@ import { fadeInAnimation } from '../../app.animations';
 import {ContentService} from '../../services/content.service';
 
 
-
 @Component({
-  selector: 'leadership',
-  templateUrl: './leadership.component.html',
+  selector: 'bird',
+  templateUrl: './bird.component.html',
   providers: [ContentService],
-  styleUrls:['./leadership.component.less'],
+  styleUrls:['./bird.component.less'],
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
-export class LeadershipComponent {
+export class BirdComponent {
   pageContent: String;
   showSpinner: boolean;
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getContent('leadership').subscribe(response => {
+    this.contentService.getContent('birdtable').subscribe(response => {
       console.log(response);
       this.pageContent = response[0].content.rendered;
       console.log( this.pageContent);
       this.showSpinner = false;
     });
   }
+
 }
 
 

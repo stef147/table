@@ -16,7 +16,7 @@ export class ValuesComponent {
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getValuesContent().subscribe(response => {
+    this.contentService.getBlogContent().subscribe(response => {
       console.log(response);
       this.pageContent = response;
       console.log( this.pageContent);

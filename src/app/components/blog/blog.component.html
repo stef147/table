@@ -1,0 +1,45 @@
+  <!-- Blog Content -->
+
+  <section id="values">
+    <div class="container ">
+      <h2 class="section-heading">Blog</h2>
+
+      <div class="col-lg-12">
+          <span class="text-center" *ngIf="showSpinner">
+            <i class="fa fa-spinner fa-spin fa-3x img-centered"></i>
+          </span>
+        <div id="pageContent" class="text-black text-justify">
+
+          <div class="container" *ngFor="let page of pageContent">
+            <div class="card">
+              <div class="card-body">
+
+                <button class="btn btn-info pull-right"
+                        (click)="show = !show">{{show ? 'Hide Full Post' : 'Show Full Post'}}
+                </button>
+
+                <i class="fa fa-calendar fa-2x"></i>
+                <div class="">
+                  <h5 class="card-title">
+                    {{page.date | date}}
+                  </h5>
+                  <h5 class="subHeader">
+                    {{page.title.rendered}}
+                  </h5>
+                </div>
+
+                <div class="pageContent"  *ngIf="!show" innerHtml="{{page.content.rendered |slice:0:500}} ">
+                </div>
+
+                <div class="pageContent" *ngIf="show" innerHtml="{{page.content.rendered}}">Text to show</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>

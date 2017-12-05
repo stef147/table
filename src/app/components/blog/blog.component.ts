@@ -1,26 +1,24 @@
 import { Component } from '@angular/core';
-import { fadeInAnimation } from '../../app.animations';
 import {ContentService} from '../../services/content.service';
-
-
+import { fadeInAnimation } from '../../app.animations';
 
 @Component({
-  selector: 'leadership',
-  templateUrl: './leadership.component.html',
+  selector: 'blog',
+  templateUrl: './blog.component.html',
   providers: [ContentService],
-  styleUrls:['./leadership.component.less'],
+  styleUrls: ['./blog.component.less'],
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
-export class LeadershipComponent {
+export class BlogComponent {
   pageContent: String;
   showSpinner: boolean;
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getContent('leadership').subscribe(response => {
+    this.contentService.getBlogContent().subscribe(response => {
       console.log(response);
-      this.pageContent = response[0].content.rendered;
+      this.pageContent = response;
       console.log( this.pageContent);
       this.showSpinner = false;
     });
