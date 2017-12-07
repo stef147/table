@@ -17,10 +17,8 @@ export class BirdComponent {
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getContent('birdtable').subscribe(response => {
-      console.log(response);
+    this.contentService.getBirdPageContent().subscribe(response => {
       this.pageContent = response[0].content.rendered;
-      console.log( this.pageContent);
       this.showSpinner = false;
     });
   }

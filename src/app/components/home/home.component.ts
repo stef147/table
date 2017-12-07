@@ -11,16 +11,4 @@ import { fadeInAnimation } from '../../app.animations';
   host: { '[@fadeInAnimation]': '' }
 })
 export class HomeComponent {
-  pageContent: String;
-  showSpinner: boolean;
-
-  constructor(private contentService: ContentService) {
-    this.showSpinner = true;
-    this.contentService.getContent('Schedule').subscribe(response => {
-      console.log(response);
-      this.pageContent = response[0].content.rendered;
-      console.log( this.pageContent);
-      this.showSpinner = false;
-    });
-  }
 }

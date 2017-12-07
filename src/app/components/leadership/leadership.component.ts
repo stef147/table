@@ -18,10 +18,8 @@ export class LeadershipComponent {
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getContent('leadership').subscribe(response => {
-      console.log(response);
+    this.contentService.getLeadershipPageContent().subscribe(response => {
       this.pageContent = response[0].content.rendered;
-      console.log( this.pageContent);
       this.showSpinner = false;
     });
   }

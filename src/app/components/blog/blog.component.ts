@@ -16,10 +16,8 @@ export class BlogComponent {
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getBlogContent().subscribe(response => {
-      console.log(response);
+    this.contentService.getBlogPageContent().subscribe(response => {
       this.pageContent = response;
-      console.log( this.pageContent);
       this.showSpinner = false;
     });
   }

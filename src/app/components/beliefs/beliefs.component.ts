@@ -16,10 +16,8 @@ export class BeliefsComponent {
 
   constructor(private contentService: ContentService) {
     this.showSpinner = true;
-    this.contentService.getContent('beliefs').subscribe(response => {
-      console.log(response);
+    this.contentService.getBeliefsPageContent().subscribe(response => {
       this.pageContent = response[0].content.rendered;
-      console.log( this.pageContent);
       this.showSpinner = false;
     });
   }
