@@ -27,6 +27,8 @@ import { WITCComponent } from './components/witc/witc.component';
 
 import { AppRoutingModule } from './app.routing';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import {ContentService} from './services/content.service';
+
 
 
 @NgModule({
@@ -62,7 +64,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
       apiKey: 'AIzaSyDmp5blb-ong3ICIun0iLPKGi3A2LZfEKg'
     })
   ],
-  providers: [],
+  providers: [ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,22 +6,25 @@ import {ContentService} from '../../services/content.service';
 @Component({
   selector: 'bird',
   templateUrl: './bird.component.html',
-  providers: [ContentService],
   styleUrls:['./bird.component.less'],
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
 export class BirdComponent {
-  pageContent: String;
-  showSpinner: boolean;
+  pageContent: any;
 
-  constructor(private contentService: ContentService) {
-    this.showSpinner = true;
-    this.contentService.getBirdPageContent().subscribe(response => {
-      this.pageContent = response[0].content.rendered;
-      this.showSpinner = false;
-    });
-  }
+  constructor(private contentService: ContentService) {};
+
+
+  ngOnInit() {
+    this.contentService.getPages().subscribe(data => {
+      data.forEach(page => {
+        if(page.slug === 'birdtable'){
+          this.pageContent = page.content.rendered;
+        };
+      });
+    }, error => console.log('Could not load Page Content'));
+  };
 
 }
 

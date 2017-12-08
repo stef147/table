@@ -7,22 +7,26 @@ import {ContentService} from '../../services/content.service';
 @Component({
   selector: 'leadership',
   templateUrl: './leadership.component.html',
-  providers: [ContentService],
   styleUrls:['./leadership.component.less'],
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
 export class LeadershipComponent {
-  pageContent: String;
-  showSpinner: boolean;
+  pageContent: any;
 
-  constructor(private contentService: ContentService) {
-    this.showSpinner = true;
-    this.contentService.getLeadershipPageContent().subscribe(response => {
-      this.pageContent = response[0].content.rendered;
-      this.showSpinner = false;
-    });
-  }
+  constructor(private contentService: ContentService) {};
+
+
+  ngOnInit() {
+    this.contentService.getPages().subscribe(data => {
+      data.forEach(page => {
+        if(page.slug === 'leadership'){
+          this.pageContent = page.content.rendered;
+        };
+      });
+    }, error => console.log('Could not load Page Content'));
+  };
+
 }
 
 

@@ -5,22 +5,26 @@ import { fadeInAnimation } from '../../app.animations';
 @Component({
   selector: 'about',
   templateUrl: './about.component.html',
-  providers: [ContentService],
   styleUrls: ['./about.component.less'],
   animations: [fadeInAnimation],
   host: { '[@fadeInAnimation]': '' }
 })
 export class AboutComponent {
-  pageContent: String;
-  showSpinner: boolean;
+  pageContent: any;
 
-  constructor(private contentService: ContentService) {
-    this.showSpinner = true;
-    this.contentService.getAboutPageContent().subscribe(response => {
-      this.pageContent = response[0].content.rendered;
-      this.showSpinner = false;
-    });
-  }
+  constructor(private contentService: ContentService) {};
+
+
+  ngOnInit() {
+    this.contentService.getPages().subscribe(data => {
+      data.forEach(page => {
+        if(page.slug === 'about'){
+          this.pageContent = page.content.rendered;
+        };
+      });
+    }, error => console.log('Could not load Page Content'));
+  };
+
 }
 
 
