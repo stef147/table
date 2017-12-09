@@ -3,11 +3,31 @@
   color: black;
 
   .dl-image {
-    content: url("../../../assets/img/DavidAndLinda.jpg");
-    padding-top: 40px;
+    content: url("../../../assets/img/davidAndLindaL.jpg");
+    padding-top:2em;
     display: block;
     margin:  auto;
-    width: 60%;
-    height: 60%;
   }
+
+
+  //Needed for firefox
+  .dl-image::after {
+    content: url("../../../assets/img/davidAndLindaL.jpg");
+  }
+
+  @media (max-width: 768px) {
+    .dl-image {
+      content: url("../../../assets/img/davidAndLindaS.jpg");
+      padding-top:2em;
+      display: block;
+      margin:  auto;
+    }
+
+
+    //Needed for firefox
+    .dl-image::after {
+      content: url("../../../assets/img/davidAndLindaS.jpg");
+    }
+  }
+
 }
