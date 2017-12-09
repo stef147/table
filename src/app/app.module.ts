@@ -11,6 +11,7 @@ import { BeliefsComponent } from './components/beliefs/beliefs.component';
 import { BirdComponent } from './components/bird/bird.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { ChristmasComponent } from './components/christmas/christmas.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DiscipleshipComponent } from './components/discipleship/discipleship.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,6 +23,7 @@ import { LocationComponent } from './components/location/location.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PrayerComponent } from './components/prayer/prayer.component';
 import { PhotosComponent } from './components/photos/photos.component';
+import { TotsComponent } from './components/tots/tots.component';
 import { ValuesComponent } from './components/values/values.component';
 import { WITCComponent } from './components/witc/witc.component';
 
@@ -39,6 +41,7 @@ import {ContentService} from './services/content.service';
     BirdComponent,
     BlogComponent,
     CalendarComponent,
+    ChristmasComponent,
     ContactComponent,
     DiscipleshipComponent,
     FooterComponent,
@@ -50,6 +53,7 @@ import {ContentService} from './services/content.service';
     NavbarComponent,
     PhotosComponent,
     PrayerComponent,
+    TotsComponent,
     ValuesComponent,
     WITCComponent,
   ],

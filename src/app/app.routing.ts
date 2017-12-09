@@ -13,6 +13,7 @@ import { FridaysComponent } from './components/fridays/fridays.component';
 import { GivingComponent } from './components/giving/giving.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { PrayerComponent } from './components/prayer/prayer.component';
+import { TotsComponent } from './components/tots/tots.component';
 import { ValuesComponent } from './components/values/values.component';
 import { WITCComponent } from './components/witc/witc.component';
 
@@ -65,6 +66,11 @@ const appRoutes: Routes = [
     path: 'prayer',
     component: PrayerComponent
   },
+
+  {
+    path: 'tots',
+    component: TotsComponent
+  },
   {
     path: 'values',
     component: ValuesComponent
@@ -80,7 +86,7 @@ const appRoutes: Routes = [
   {
     path: '**',
     component: HomeComponent
-  },
+  }
 
 ];
 
@@ -89,7 +95,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false,// <-- debugging purposes only
-        useHash: false}
+        useHash: true}
     )
   ],
   exports: [
