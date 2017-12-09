@@ -10,7 +10,9 @@ import 'rxjs/add/operator/publishReplay';
 export class ContentService {
 
   private pagesUrl = 'http://tabletandragee.org/Content/wp-json/wp/v2/pages';
+  private postsUrl = 'http://tabletandragee.org/Content/wp-json/wp/v2/posts';
   allPages: any;
+  allPosts: any;
 
 
   constructor(private http: Http) {
@@ -29,11 +31,17 @@ export class ContentService {
     return this.allPages;
   }
 
-
-  getBlogContent() {
-    var apiUrl = 'http://tabletandragee.org/Content/wp-json/wp/v2/pages?parent=89';
-    return this.http.get(apiUrl)
-      .map(res => res.json());
+  getPosts(){
+    if(!this.allPosts){
+      console.log('calling to get page data from wp');
+      this.allPosts = this.http.get(this.postsUrl)
+        .map(res => res.json())
+        .publishReplay(1)
+        .refCount();
+    }
+    return this.allPosts;
   }
+
+
 
 }

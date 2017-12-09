@@ -14,15 +14,10 @@ import {ContentService} from './services/content.service';
 
 })
 export class AppComponent {
-  private pageContent = {};
-  showSpinner: boolean;
+  pageContent: any;
+  postsContent: any;
 
-  constructor(private contentService: ContentService) {
-    // this.showSpinner = true;
-    // this.contentService.getLeadershipPageContent().subscribe(response => {
-    //   this.pageContent = response[0].content.rendered;
-    //   this.showSpinner = false;
-  };
+  constructor(private contentService: ContentService) {};
 
 
   ngOnInit() {
@@ -31,6 +26,14 @@ export class AppComponent {
       this.pageContent = data;
       console.log(data);
     }, error => console.log('Could not load Page Content'));
+
+    this.contentService.getPosts().subscribe(data => {
+      console.log('all');
+      this.postsContent = data;
+      console.log(data);
+    }, error => console.log('Could not load Posts Content'));
+
+
     };
 
 

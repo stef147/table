@@ -1,53 +1,85 @@
-/*---------------------------------------------*/
-/*Footer styling*/
-/*---------------------------------------------*/
-
-
 footer {
   padding-top: 2em;
   min-height: 10vh;
   background-color: white;
   color: black;
-  width: 100%;
+  //text-align: center;
+
+  .footerRow{
+    text-align: center;
+    margin-top: 1em;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+    font-size: 1em;
+  }
+
+
+  .copyright {
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+  }
+
+  .quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+
+
+  @media (max-width: 900px) {
+    .ea-member {
+      content: url("../../../assets/img/eaLogoSmall.png");
+    }
+    .forge {
+      content: url("../../../assets/img/forgeLogoSmall.png");
+    }
+    .ccpas {
+      content: url("../../../assets/img/CCPASLogoSmall.png");
+    }
+  }
+
+  @media (min-width: 900px) {
+    .ea-member {
+      content: url("../../../assets/img/eaLogo_L.png");
+    }
+    .forge {
+      content: url("../../../assets/img/forgeLogo.png");
+    }
+    .ccpas {
+      content: url("../../../assets/img/CCPASLogo.png");
+    }
+  }
+
 }
 
-.footerRow{
-  text-align: center;
-  margin-top: 1em;
-  margin-right: 0.25em;
-  margin-left: 0.25em;
-}
-
-
-footer .copyright {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-transform: none;
-  padding-left: 0.5em;
-}
-
-.fa {
-  color: black;
-  padding-left: 0.5em;
-}
-
-.fa:hover, .fa:active {
-  color: #fed136;
-}
-
-.ea-member {
-  content: url("../../../assets/img/eaLogo_L.png");
-}
-
-.forge {
-  content: url("../../../assets/img/forgeLogo.png");
-}
-
-.ccpas {
-  content: url("../../../assets/img/CCPASLogo.png");
-}
 
 
 
 
 
+//ul.social-buttons {
+//  margin-bottom: 0;
+//  li {
+//    a {
+//      font-size: 20px;
+//      line-height: 40px;
+//      display: block;
+//      width: 40px;
+//      height: 40px;
+//      -webkit-transition: all 0.3s;
+//      -moz-transition: all 0.3s;
+//      transition: all 0.3s;
+//      color: white;
+//      border-radius: 100%;
+//      outline: none;
+//      background-color: whitesmoke;
+//      &:active,
+//      &:focus,
+//      &:hover {
+//        background-color: whitesmoke;
+//      }
+//    }
+//  }
+//}

@@ -4,28 +4,12 @@
     <div class="container text-center">
       <h2 class="section-heading">Values</h2>
 
+      <!--categoreis === 3 - 3 corresponds to the values category on poasts-->
+      <div id="{{post.slug}}" *ngFor="let post of postContent">
+        <a *ngIf="post.categories[0] === 3" routerLink="/blog" fragment="{{post.slug}}">
+          <h2 class="subHeader">{{post.title.rendered}}</h2>
+        </a>
+      </div>
 
-      <h5>Jesus is Lord</h5>
-      <h5>Discipleship</h5>
-      <h5>Generosity</h5>
-      <h5>Mission</h5>
-      <h5>Community</h5>
-      <h5>Prayer</h5>
-      <h5>Word & Spirit</h5>
-
-
-
-      <!--<div class="col-lg-12">-->
-          <!--<span *ngIf="showSpinner">-->
-            <!--<i class="fa fa-spinner fa-spin fa-3x img-centered"></i>-->
-          <!--</span>-->
-        <!--<div id="pageContent" class="text-black text-justify">-->
-          <!--<div *ngFor="let page of pageContent">-->
-            <!--<div class="pageContent" innerHtml="{{page.title.rendered}}"></div>-->
-            <!--<div class="pageContent" innerHtml="{{page.content.rendered}}"></div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
     </div>
   </section>

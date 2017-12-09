@@ -12,19 +12,20 @@ import { fadeInAnimation } from '../../app.animations';
 export class BlogComponent {
   pageContent: any;
 
+  getAuthor(authorId) {
+    var author = 'David Spence';
+    if(authorId === 2){
+      author = 'David Spence';
+    }
+    return author;
+  }
+
   constructor(private contentService: ContentService) {};
 
 
   ngOnInit() {
-    this.contentService.getPages().subscribe(data => {
-      data.forEach(page => {
-        if(page.slug === 'blog'){
-          this.pageContent = page.content.rendered;
-        }
-        else{
-          console.log('Could not load Page Content');
-        }
-      });
+    this.contentService.getPosts().subscribe(data => {
+          this.pageContent = data;
     }, error => console.log('Could not load Page Content'));
   };
 
