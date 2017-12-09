@@ -3,29 +3,27 @@ footer {
   min-height: 10vh;
   background-color: white;
   color: black;
-  //text-align: center;
+
+  .footerContainer{
+    margin-left:1em;
+    margin-right:1em;
+  }
 
   .footerRow{
     text-align: center;
-    margin-top: 1em;
     margin-right: 0.25em;
     margin-left: 0.25em;
     font-size: 1em;
   }
 
-
-  .copyright {
-    font-size: 90%;
-    line-height: 40px;
-    text-transform: none;
+  .copyRightDiv {
+    padding-top: 1em;
   }
 
-  .quicklinks {
-    font-size: 90%;
-    line-height: 40px;
-    margin-bottom: 0;
-    text-transform: none;
+  .socialMediaDiv{
+    margin-top: 1em;
   }
+
 
 
   @media (max-width: 900px) {
@@ -49,9 +47,18 @@ footer {
     .ccpas::after {
       content: url("../../../assets/img/CCPASLogoSmall.png");
     }
+
+    .copyright{
+      float:none;
+
+    }
+
+    .list-inline{
+      float:none;
+    }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 901px) {
     .ea-member {
       content: url("../../../assets/img/eaLogoMed.png");
     }
@@ -71,6 +78,14 @@ footer {
     }
     .ccpas::after {
       content: url("../../../assets/img/CCPASMed.png");
+    }
+
+    .copyright{
+      float:left;
+    }
+
+    .list-inline{
+      float:right;
     }
   }
 
