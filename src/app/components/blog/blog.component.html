@@ -1,54 +1,103 @@
   <!-- Blog Content -->
 
   <section id="blog">
-    <div class="container">
-      <h2 class="section-heading">Blog</h2>
+    <div class="container blogContainer">
+
+      <div class="col-xs-12">
+        <h2 class="section-heading">Blog</h2>
 
 
-            <div class="card" id="{{page.slug}}" *ngFor="let page of pageContent">
+        <div class="postContainer" id="{{post.slug}}" *ngFor="let post of postsContent">
 
-              <div class="card-header">
-                <div class="">
-                  <a ng-href="#"(click)="page.show = !page.show">
-                    <i class="fa fa-2x pull-right" [ngClass]="page.show ?'fa-minus-circle':'fa-plus-circle'"></i>
-
-                  </a>
-                  <i class="fa fa-calendar fa-2x"></i>
-                  <h5 class="card-title">
-                    {{page.date | date}}
-                  </h5>
-                </div>
-
-
-                <div class="">
-                  <h5 class="subHeader card-title text-center">
-                    {{page.title.rendered}}
-                  </h5>
-                  <h6 class="card-subtitle text-center text-muted">
-                    {{getAuthor(page.author)}}
-                  </h6>
-                </div>
-
-
-
-              </div>
-
-
-              <div class="card-block">
-                <div class="pageContent"
-                     *ngIf="!page.show" innerHtml="{{page.content.rendered |slice:0:500}}....">
-                </div>
-
-                <div class="pageContent"
-                     *ngIf="page.show" innerHtml="{{page.content.rendered}}">Text to show
-                </div>
-
-                <button class="btn btn-info pull-left" (click)="page.show = !page.show">
-                  {{page.show ? 'Hide Full Post' : 'Show Full Post'}}
-                </button>
-              </div>
-
+          <div class="dateDiv">
+            <div class=" col-xs-2 pull-right">
+              <a ng-href="#"(click)="post.showAll = !post.showAll">
+              <i class="fa fa-2x pull-right" [ngClass]="post.showAll ?'fa-minus-circle':'fa-plus-circle'"></i>
+              </a>
             </div>
+            <div class="col-xs-2">
+              <i class="fa fa-calendar fa-3x"></i>
+              <h5 class="">
+                {{post.date | date}}
+              </h5>
+            </div>
+          </div>
+
+          <div class="titleDiv">
+            <h5 class="subHeader">
+              {{post.title.rendered}}
+            </h5>
+            <h5 class="text-muted">
+              AUTHOR: {{getAuthor(post.author)}}
+            </h5>
+          </div>
+
+            <div class="pageContent"
+                 *ngIf="!post.showAll"
+                 innerHtml="{{post.content.rendered |slice:0:500}}....">
+            </div>
+
+          <div class="pageContent"
+               *ngIf="post.showAll"
+               innerHtml="{{post.content.rendered }}">
+          </div>
+
+          <button class="btn btn-info" (click)="post.showAll = !post.showAll">
+          {{post.showAll ? 'Hide Full Post' : 'Show Full Post'}}
+          </button>
+
+        </div>
+
+      </div>
+
+          <!--<div *ngFor="let post of postsContent">-->
+            <!--<div class="card">-->
+
+              <!--<div class="card-header">-->
+                <!--<div class="">-->
+                  <!--<a ng-href="#"(click)="post.showAll = !post.showAll">-->
+                    <!--<i class="fa fa-2x pull-right" [ngClass]="post.showAll ?'fa-minus-circle':'fa-plus-circle'"></i>-->
+
+                  <!--</a>-->
+                  <!--<i class="fa fa-calendar fa-2x"></i>-->
+                  <!--<h5 class="card-title">-->
+                    <!--{{post.date | date}}-->
+                  <!--</h5>-->
+                <!--</div>-->
+
+
+                <!--<div class="">-->
+                  <!--<h5 class="subHeader card-title text-center">-->
+                    <!--{{post.title.rendered}}-->
+                  <!--</h5>-->
+                  <!--<h6 class="card-subtitle text-center text-muted">-->
+                    <!--{{getAuthor(post.author)}}-->
+                  <!--</h6>-->
+                <!--</div>-->
+
+
+
+              <!--</div>-->
+
+
+              <!--<div class="card-block">-->
+                <!--<div class="pageContent"-->
+                     <!--innerHtml="{{post.content.rendered |slice:0:500}}....">-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash;<div class="pageContent"&ndash;&gt;-->
+                     <!--&lt;!&ndash;*ngIf="post.showAll" innerHtml="{{post.content.rendered}}">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                <!--<button class="btn btn-info pull-left" (click)="post.showAll = !post.showAll">-->
+                  <!--{{post.showAll ? 'Hide Full Post' : 'Show Full Post'}}-->
+                <!--</button>-->
+              <!--</div>-->
+
+            <!--</div>-->
+
+          <!--</div>-->
+
 
 
 

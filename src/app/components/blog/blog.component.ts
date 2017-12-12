@@ -10,7 +10,7 @@ import { fadeInAnimation } from '../../app.animations';
   host: { '[@fadeInAnimation]': '' }
 })
 export class BlogComponent {
-  pageContent: any;
+  postsContent: any;
 
   getAuthor(authorId) {
     var author = 'David Spence';
@@ -25,7 +25,7 @@ export class BlogComponent {
 
   ngOnInit() {
     this.contentService.getPosts().subscribe(data => {
-          this.pageContent = data;
+          this.postsContent = data;
     }, error => console.log('Could not load Page Content'));
   };
 
