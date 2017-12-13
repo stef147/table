@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ContentService} from '../../services/content.service';
 import { fadeInAnimation } from '../../app.animations';
 
+
 @Component({
   selector: 'blog',
   templateUrl: './blog.component.html',
